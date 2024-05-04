@@ -46,6 +46,7 @@ class SI1145Component : public PollingComponent, public i2c::I2CDevice {
  protected:
   // Aux RW fns
   uint8_t read_byte(uint8_t reg);
+  using i2c::I2CDevice::read_byte;
 
   void param_set(uint8_t loc, uint8_t val);
   void send_command(uint8_t code);
